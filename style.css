@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+.vid1:hover{
+
+}
+[back]
+{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: linear-gradient(#d0f5ff,white);
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+@font-face {
+    font-family: Corb;
+    src: url("assets/corbert-condensed/The Northern Block - Corbert Condensed Medium.otf");
+}
+.card
+{
+    display: grid;
+    place-items: center;
+}
+@media (orientation: landscape){
+    .heading{
+        font-family: Corb;
+        font-size: 25px;
+    }
+    .mainBox
+    {
+        display: flex;
+    }
+    .card
+    {
+        height: 500px;
+        width: 300px;
+        background: white;
+        box-shadow: 5px 5px 20px 1px #adadad;
+        border-radius: 20px;
+        margin: 40px;
+        opacity: 0.7;
+    }
+    .video
+    {
+        opacity: 0;
+        transition: opacity 1s;
+        height: 300px;
+        width: 300px;
+        border-radius: 20px;
+        background: url("assets/Personal data.mp4");
+    }
+}
+@media (orientation: portrait) {
+    .heading{
+        display: grid;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-family: Corb;
+        font-size: 60px;
+        position: relative;
+    }
+    .per::before{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        top: 40px;
+        font-size: 50px;
+        left:50%;
+        transform: translate(-50%,50%);
+        font-family: Consolas;
+        text-align: center;
+        content: "This Section is for introduction to myself to you that who am I and why i am important to you";
+        width: 90%;
+    }
+    .mainBox
+    {
+        display: grid;
+    }
+    .card
+    {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: 85vh;
+        width: 85vw;
+        background: white;
+        box-shadow: 5px 5px 20px 1px #adadad;
+        border-radius: 20px;
+        margin: 40px;
+        opacity: 0.7;
+    }
+    .video
+    {
+        align-self: start;
+        opacity: 0;
+        transition: opacity 1s;
+        height: 90vw;
+        width: 90vw;
+        border-radius: 20px;
+        background: url("assets/Personal data.mp4");
+    }
+}
+.mainBox
+{
+
+    justify-content: center;
+}
