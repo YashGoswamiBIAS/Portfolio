@@ -17,7 +17,6 @@
     place-items: center;
     width: 100%;
     position: fixed;
-    top:0px;
     z-index: 10;
     background: white;
     transition: opacity 1s;
@@ -241,7 +240,7 @@ body{
         border-radius: 20px;
         height: 100vw;
         width: 100vw;
-        box-shadow: 2px 2px 30px 2px white;
+        z-index: 5;
     }
     .mainEntry{
         height: 150vh;
