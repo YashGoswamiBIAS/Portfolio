@@ -54,7 +54,7 @@ body{
     {
         position: absolute;
         right: 0px;
-        opacity: 0.8;
+        opacity: 1;
         border-radius: 20px;
         height: 800px;
         width: 800px;
@@ -236,7 +236,7 @@ body{
         position: absolute;
         top: 100vh;
         right: 0px;
-        opacity: 0.8;
+        opacity: 1;
         border-radius: 20px;
         height: 100vw;
         width: 100vw;
