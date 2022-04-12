@@ -80,7 +80,33 @@ body{
         transform: translate(-50%,50%);
         font-family: Consolas;
         text-align: center;
-        content: "This Section is for introduction to myself to you that who am I and why i am important to you";
+        content: "This Section tells about myself by which you can see my hobbies old me and see some pictures of my past.";
+        width: 90%;
+    }
+    .res::before{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        top: 40px;
+        font-size: 50px;
+        left:50%;
+        transform: translate(-50%,50%);
+        font-family: Consolas;
+        text-align: center;
+        content: "In my free time, I use to search for tech and explore things. maybe you find it interesting.";
+        width: 90%;
+    }
+    .goal::before{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        top: 40px;
+        font-size: 50px;
+        left:50%;
+        transform: translate(-50%,50%);
+        font-family: Consolas;
+        text-align: center;
+        content: "I am very curious about my objectives. See you will also find it useful. I will do some fascinating research in future.";
         width: 90%;
     }
     .mainBox
@@ -103,6 +129,7 @@ body{
     {
         align-self: start;
         opacity: 0;
+        justify-self: center;
         transition: opacity 1s;
         height: 80vw;
         width: 80vw;
