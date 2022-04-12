@@ -1,9 +1,11 @@
-var vid1 = document.querySelector(".vid1")
-var vid2 = document.querySelector(".vid2")
-var vid3 = document.querySelector(".vid3")
+var vid1 = document.querySelector(".vid1");
+var vid2 = document.querySelector(".vid2");
+var vid3 = document.querySelector(".vid3");
+var cover = document.querySelector(".covervid");
 vid1.style.opacity = 1 ;
 vid2.style.opacity = 1 ;
 vid3.style.opacity = 1 ;
+cover.style.opacity = 1 ;
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -50,6 +52,25 @@ VideoListener3.else(()=>{
 });
 VideoListener3.enable(true);
 
+VideoListenercover = new BoolListener() ;
+VideoListenercover.watch(()=>{return isInViewport(document.querySelector(".covervid"))}) ;
+VideoListenercover.then(()=>{
+    document.querySelector(".covervid").currentTime = 0;
+    document.querySelector(".covervid").style.opacity = 1 ;
+    setTimeout(()=>{document.querySelector(".covervid").play();},500);
+    VideoListenercover.enable(false);
+});
+VideoListenercover.else(()=>{
+});
+VideoListenercover.enable(true);
+
+if (isInViewport(document.querySelector(".covervid")))
+{
+    document.querySelector(".covervid").currentTime = 0;
+    document.querySelector(".covervid").style.opacity = 1 ;
+    setTimeout(()=>{document.querySelector(".covervid").play();},500);
+    VideoListener1.enable(false);
+}
 if (isInViewport(document.querySelector(".vid1")))
 {
     document.querySelector(".vid1").currentTime = 0;

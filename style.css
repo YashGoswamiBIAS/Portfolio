@@ -9,6 +9,7 @@
 .vid1:hover{
 
 }
+
 .welcome
 {
     height: 100%;
@@ -19,14 +20,18 @@
     z-index: 10;
     background: white;
     transition: opacity 1s;
-    top:0px ;
 }
 [back]
 {
     height: 100vh;
     width: 100vw;
     position: fixed;
-    background: linear-gradient(#d0f5ff,white);
+    background: linear-gradient(#f0f9ff,white);
+}
+.fon
+{
+    position: absolute;
+    z-index: 5;
 }
 body{
     height: 100vh;
@@ -38,16 +43,67 @@ body{
     font-family: Corb;
     src: url("assets/corbert-condensed/The Northern Block - Corbert Condensed Medium.otf");
 }
-.mainEntry{
-    height: 100vh;
-    width: 100vw;
-}
+
 .card
 {
     display: grid;
     place-items: center;
 }
 @media (orientation: landscape){
+    .covervid
+    {
+        position: absolute;
+        right: 0px;
+        opacity: 0.8;
+        border-radius: 20px;
+        height: 800px;
+        width: 800px;
+        box-shadow: 2px 2px 20px 2px white;
+    }
+    .mainEntry{
+        height: 120vh;
+        width: 100vw;
+        display: flex;
+        align-items: start;
+        overflow: hidden;
+    }
+    .cut{
+        height: 100vh;
+        width: 100vh;
+        background: transparent;
+        transform: rotate(180deg);
+        position: absolute;
+        overflow: hidden;
+        top: 0px;
+        left: 0px;
+    }
+    .circle{
+        height: 200vh;
+        width: 200vh;
+        background: #d7d7ff;
+        position: absolute;
+        border-radius: 50%;
+    }
+    .fon
+    {
+        top: 300px;
+        left : 300px;
+    }
+    .title
+    {
+        font-family: Corb;
+        font-size : 100px;
+        color: white;
+        text-shadow: 2px 2px 5px #787878;
+    }
+    .subtitle
+    {
+        font-family: Consolas;
+        font-size : 40px;
+        color: white;
+        text-shadow: 2px 2px 5px #787878;
+        transform: translate(20px,100px);
+    }
     .heading{
         font-family: Corb;
         font-size: 25px;
@@ -156,7 +212,7 @@ body{
         padding: 30px;
         font-family: Corb;
         font-size: 25px;
-        content: "This Section tells about myself by which you can see my hobbies old me and see some pictures of my past.";
+        content: "I am very curious about my objectives. See you will also find it useful. I will do some fascinating research in future.";
         animation: latetext 1s forwards;
         position: absolute;
         height: 440px;
@@ -175,6 +231,88 @@ body{
     }
 }
 @media (orientation: portrait) {
+    .covervid
+    {
+        position: absolute;
+        top: 100vh;
+        right: 0px;
+        opacity: 0.8;
+        border-radius: 20px;
+        height: 100vw;
+        width: 100vw;
+        box-shadow: 2px 2px 30px 2px white;
+    }
+    .mainEntry{
+        height: 150vh;
+        width: 100vw;
+        display: flex;
+        align-items: start;
+        overflow: hidden;
+    }
+    .cut{
+        height: 200vw;
+        width: 100vw;
+        background: transparent;
+        transform: rotate(180deg);
+        position: absolute;
+        overflow: hidden;
+        top: 0px;
+        left: 0px;
+    }
+    @keyframes circlepor {
+        from{
+            top : 0px ;
+            left: 0px;
+            height: 400vw;
+            width: 400vw;
+            background: #d7d7ff;
+            position: absolute;
+            transform: translate(50vw,50vh);
+            border-radius: 50%;
+        }
+        to{
+            top : 0px ;
+            left: 0px;
+            height: 400vw;
+            width: 400vw;
+            background: #d7d7ff;
+            position: absolute;
+            transform: translate(-40vw,0);
+            border-radius: 50%;
+        }
+    }
+    .circle{
+        top : 0px ;
+        left: 0px;
+        height: 400vw;
+        width: 400vw;
+        background: #d7d7ff;
+        position: absolute;
+        transform: translate(-40vw,0);
+        border-radius: 50%;
+    }
+    .fon
+    {
+        position: absolute;
+        top: 45%;
+        left:50%;
+    }
+    .title
+    {
+        font-family: Corb;
+        font-size : 150px;
+        color: white;
+        text-shadow: 2px 2px 5px #787878;
+        transform: translate(-50%,-50%);
+    }
+    .subtitle
+    {
+        font-family: Consolas;
+        font-size : 50px;
+        color: white;
+        text-shadow: 2px 2px 5px #787878;
+        transform: translate(-60%,100%);
+    }
     .heading{
         display: grid;
         justify-content: center;
