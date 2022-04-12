@@ -104,8 +104,8 @@ body{
         align-self: start;
         opacity: 0;
         transition: opacity 1s;
-        height: 90vw;
-        width: 90vw;
+        height: 80vw;
+        width: 80vw;
         border-radius: 20px;
         background: url("assets/Personal data.mp4");
     }
