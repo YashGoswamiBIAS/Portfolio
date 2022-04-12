@@ -54,7 +54,8 @@ body{
     .covervid
     {
         position: absolute;
-        right: 0px;
+        top: 5px;
+        right: 5px;
         opacity: 1;
         border-radius: 20px;
         height: 800px;
@@ -79,11 +80,23 @@ body{
         left: 0px;
     }
     .circle{
+        position: absolute;
+        top: 0px;
+        left: 0px;
         height: 200vh;
         width: 200vh;
-        background: #d7d7ff;
-        position: absolute;
+        background: #6565ff;
         border-radius: 50%;
+    }
+    @keyframes opening  {
+        from
+        {
+            transform: translate(-100%,-100%) rotate(180deg);
+        }
+        to
+        {
+            transform: translate(0%,0%) rotate(180deg);
+        }
     }
     .fon
     {
@@ -95,14 +108,14 @@ body{
         font-family: Corb;
         font-size : 100px;
         color: white;
-        text-shadow: 2px 2px 5px #787878;
+        text-shadow: 2px 2px 5px #505050;
     }
     .subtitle
     {
         font-family: Consolas;
         font-size : 40px;
         color: white;
-        text-shadow: 2px 2px 5px #787878;
+        text-shadow: 2px 2px 5px #505050;
         transform: translate(20px,100px);
     }
     .heading{
@@ -276,9 +289,9 @@ body{
         to{
             top : 0px ;
             left: 0px;
-            height: 400vw;
+            height: 300vw;
             width: 400vw;
-            background: #d7d7ff;
+            background: #6565ff;
             position: absolute;
             transform: translate(-40vw,0);
             border-radius: 50%;
@@ -287,9 +300,9 @@ body{
     .circle{
         top : 0px ;
         left: 0px;
-        height: 400vw;
+        height: 300vw;
         width: 400vw;
-        background: #d7d7ff;
+        background: #6565ff;
         position: absolute;
         transform: translate(-40vw,0);
         border-radius: 50%;

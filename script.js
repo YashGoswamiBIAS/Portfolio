@@ -69,7 +69,14 @@ if (isInViewport(document.querySelector(".covervid")))
     document.querySelector(".covervid").currentTime = 0;
     document.querySelector(".covervid").style.opacity = 1 ;
     setTimeout(()=>{document.querySelector(".covervid").play();},500);
-    VideoListener1.enable(false);
+    VideoListenercover.enable(false);
+}
+if (window.innerWidth > window.innerHeight)
+{
+    document.querySelector(".covervid").currentTime = 0;
+    document.querySelector(".covervid").style.opacity = 1 ;
+    setTimeout(()=>{document.querySelector(".covervid").play();},2000);
+    VideoListenercover.enable(false);
 }
 if (isInViewport(document.querySelector(".vid1")))
 {
