@@ -12,6 +12,7 @@
 
 .welcome
 {
+    top: 0px;
     height: 100%;
     display: grid;
     place-items: center;
