@@ -9,6 +9,17 @@
 .vid1:hover{
 
 }
+.welcome
+{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background: white;
+    transition: opacity 1s;
+}
 [back]
 {
     height: 100vh;
@@ -79,7 +90,7 @@ body{
         opacity: 0;
         border-radius: 20px;
         position: absolute;
-        top: 0px;
+        bottom: 0px;
         content: "";
         height: 0px;
         width: 300px;
