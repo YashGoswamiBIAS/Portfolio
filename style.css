@@ -26,6 +26,10 @@ body{
     font-family: Corb;
     src: url("assets/corbert-condensed/The Northern Block - Corbert Condensed Medium.otf");
 }
+.mainEntry{
+    height: 100vh;
+    width: 100vw;
+}
 .card
 {
     display: grid;
@@ -36,7 +40,7 @@ body{
         font-family: Corb;
         font-size: 25px;
     }
-    .mainBox
+    .sections
     {
         display: flex;
     }
@@ -49,6 +53,104 @@ body{
         border-radius: 20px;
         margin: 40px;
         opacity: 0.7;
+        transition: all 1s;
+        position: relative;
+    }
+    .card:hover{
+        opacity: 0.4;
+    }
+    .carda::before{
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 0px;
+        content: "";
+        height: 0px;
+        width: 300px;
+        background-color: rgba(255, 107, 107, 0.51);
+        transition: all 500ms;
+    }
+    .cardb::before{
+        display: grid;
+        place-items: center;
+        content: "";
+        opacity: 0;
+        border-radius: 20px;
+        position: absolute;
+        top: 0px;
+        content: "";
+        height: 0px;
+        width: 300px;
+        background-color: rgba(255, 107, 107, 0.51);
+        transition: all 500ms,  color 0s;
+        color: rgba(255, 0, 0, 0);
+    }
+    .cardc::before{
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 0px;
+        content: "";
+        height: 0px;
+        width: 300px;
+        background-color: rgba(255, 107, 107, 0.51);
+        transition: all 500ms;
+    }
+    @keyframes latetext {
+        0%{
+            color: white;
+        }
+        60%
+        {
+            color: white;
+        }
+        100%
+        {
+            color: black;
+        }
+    }
+    .carda:hover::before{
+        opacity: 1;
+        padding: 30px;
+        font-family: Corb;
+        font-size: 25px;
+        content: "This Section tells about myself by which you can see my hobbies old me and see some pictures of my past.";
+        animation: latetext 1s forwards;
+        position: absolute;
+        height: 440px;
+        width: 240px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    .cardb:hover::before{
+        opacity: 1;
+        padding: 30px;
+        font-family: Corb;
+        font-size: 25px;
+        content: "In my free time, I use to search for tech and explore things. maybe you find it interesting.";
+        animation: latetext 1s forwards;
+        position: absolute;
+        height: 440px;
+        width: 240px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    .cardc:hover::before{
+        opacity: 1;
+        padding: 30px;
+        font-family: Corb;
+        font-size: 25px;
+        content: "This Section tells about myself by which you can see my hobbies old me and see some pictures of my past.";
+        animation: latetext 1s forwards;
+        position: absolute;
+        height: 440px;
+        width: 240px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
     }
     .video
     {
@@ -93,7 +195,7 @@ body{
         transform: translate(-50%,50%);
         font-family: Corb;
         text-align: center;
-        content: "In my free time, I use to search for tech and explore things. maybe you find it interesting.";
+        content: "I am very curious about my objectives. See you will also find it useful. I will do some fascinating research in future.";
         width: 90%;
     }
     .goal::before{
