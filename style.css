@@ -29,11 +29,7 @@
     position: fixed;
     background: linear-gradient(#f0f9ff,white);
 }
-.fon
-{
-    position: absolute;
-    z-index: 5;
-}
+
 body{
     height: 100vh;
     width: 100vw;
@@ -51,6 +47,13 @@ body{
     place-items: center;
 }
 @media (orientation: landscape){
+    .fon
+    {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 2s;
+        z-index: 5;
+    }
     .covervid
     {
         position: absolute;
@@ -293,7 +296,7 @@ body{
             width: 400vw;
             background: #6565ff;
             position: absolute;
-            transform: translate(-40vw,0);
+            transform: translate(-40vw,15vh);
             border-radius: 50%;
         }
     }
@@ -304,22 +307,30 @@ body{
         width: 400vw;
         background: #6565ff;
         position: absolute;
-        transform: translate(-40vw,0);
+        transform: translate(-40vw,15vh);
         border-radius: 50%;
     }
-    .fon
+    /*.fon*/
+    /*{*/
+    /*    position: absolute;*/
+    /*    top: 45%;*/
+    /*    left:50%;*/
+    /*}*/
+    .lbls
     {
+        display: grid;
         position: absolute;
-        top: 45%;
-        left:50%;
+        z-index: 5;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
     .title
     {
         font-family: Corb;
-        font-size : 150px;
+        font-size : 160px;
         color: white;
         text-shadow: 2px 2px 5px #787878;
-        transform: translate(-50%,-50%);
     }
     .subtitle
     {
@@ -327,7 +338,7 @@ body{
         font-size : 50px;
         color: white;
         text-shadow: 2px 2px 5px #787878;
-        transform: translate(-60%,100%);
+        margin-left: 20px;
     }
     .heading{
         display: grid;
