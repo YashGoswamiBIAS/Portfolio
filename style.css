@@ -9,7 +9,27 @@
 .vid1:hover{
 
 }
+.article{
+    width: 100vw;
+    z-index: 5;
+}
+/* SAMPLE */
 
+/* SAMPLE */
+.head
+{
+    font-family: Corb;
+    font-size: 80px;
+    margin:20px;
+    display: flex;
+    justify-content: center;
+}
+.note
+{
+    font-family: Consolas;
+    margin: 60px;
+    font-size: 20px;
+}
 .welcome
 {
     height: 100%;
@@ -47,6 +67,105 @@ body{
     place-items: center;
 }
 @media (orientation: landscape){
+
+    .techs
+    {
+        z-index: 5;
+        height: 500px;
+        width: 1050px;
+        border-radius: 40px;
+        box-shadow: 2px 2px 10px #aaaaaa;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .proimage{
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        right: 0px;
+        margin-right: 20px;
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: right center;
+        transition: opacity 500ms;
+        opacity: 0;
+    }
+    .bubble
+    {
+        height: 00px;
+        position: absolute;
+        width: 00px;
+        background: #ff5a00;
+        border-radius: 50%;
+        transition: all 800ms;
+        transform: translate(-50%,0px);
+    }
+    [last]
+    {
+        height: 100px;
+        width: 100vw;
+    }
+    .cons
+    {
+        font-family: Corb;
+        font-size: 60px;
+        margin:20px;
+        display: flex;
+        justify-content: center;
+        color: #2f2f2f;
+        font-family: "Corbel Light";
+        z-index: 5;
+    }
+    @keyframes bubbleani {
+        from
+        {
+            height: 0px;
+            width: 0px;
+        }
+        to
+        {
+            height:800px;
+            width: 800px;
+        }
+    }
+    @keyframes bubbleanireverse {
+        to
+        {
+            height: 0px;
+            width: 0px;
+        }
+        from
+        {
+            height:800px;
+            width: 800px;
+
+        }
+    }
+    .changeset
+    {
+        margin: 100px;
+        font-size: 60px;
+        color: white;
+        text-shadow: 2px 2px 5px #686868;
+        user-select: none;
+        z-index: 1;
+        transition: opacity 500ms;
+        opacity: 0;
+    }
+    .changetext{
+        font-family: Corb;
+    }
+    .changebuttons
+    {
+        font-family: Consolas;
+        font-size: 80px;
+        font-weight: bold;
+        transition: all 1s;
+    }
+
     .fon
     {
         position: absolute;
@@ -248,6 +367,110 @@ body{
     }
 }
 @media (orientation: portrait) {
+
+    .techs
+    {
+        z-index: 5;
+        height: 85vw;
+        width: 85vw;
+        border-radius: 40px;
+        box-shadow: 2px 2px 10px #aaaaaa;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .proimage{
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        right: 50%;
+        top: 40%;
+        transform: translate(50%,-50%);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: right center;
+        transition: opacity 500ms;
+        opacity: 0;
+    }
+    .bubble
+    {
+        height:1500px;
+        width: 1500px;
+        position: absolute;
+        background: #ff5a00;
+        border-radius: 50%;
+        left: 50%;
+        transform: translate(-50%,100%);
+        transition: all 800ms;
+
+    }
+    [last]
+    {
+        height: 100px;
+        width: 100vw;
+    }
+    .cons
+    {
+        font-size: 60px;
+        margin:20px;
+        display: flex;
+        justify-content: center;
+        color: #2f2f2f;
+        font-family: "Corbel Light";
+        z-index: 5;
+    }
+    @keyframes bubbleani {
+        from
+        {
+            transform: translate(-50%,110%);
+        }
+        to
+        {
+            transform: translate(-50%,50%);
+        }
+    }
+    @keyframes bubbleanireverse {
+        to
+        {
+            transform: translate(-50%,110%);
+        }
+        from
+        {
+            transform: translate(-50%,50%);
+        }
+    }
+    .changeset
+    {
+        justify-self: center;
+        font-size: 60px;
+        color: white;
+        text-shadow: 2px 2px 5px #686868;
+        user-select: none;
+        z-index: 1;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        transition: opacity 500ms;
+        opacity: 0;
+        transform: translate(-50%,0px);
+        position: absolute;
+        left: 50%;
+        bottom: 20%;
+    }
+    .changetext{
+        font-family: Corb;
+        margin: 10px;
+    }
+    .changebuttons
+    {
+        font-family: Consolas;
+        font-size: 80px;
+        font-weight: bold;
+        transition: all 1s;
+    }
+
     .covervid
     {
         position: absolute;

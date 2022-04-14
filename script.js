@@ -64,6 +64,63 @@ VideoListenercover.else(()=>{
 });
 VideoListenercover.enable(true);
 
+var techs = () => {
+    document.querySelector(".bubble").style.animation = "bubbleani 800ms forwards" ;
+    setTimeout(()=>{
+        changeset.style.opacity = 1 ;
+        proimage.style.opacity = 1 ;
+    },800);
+} ;
+
+
+var changeset = document.querySelector(".changeset") ;
+var proimage = document.querySelector(".proimage") ;
+
+var changetext = document.querySelector(".changetext");
+
+var TechsIKnow = ["HTML", "CSS", "JAVASCRIPT", "PYTHON", "NODEJS", "BOOTSTRAP", "C", "C#"] ;
+var TechsIKnowImage = ["assets/banner/html.svg","assets/banner/css.svg","assets/banner/js.svg", "assets/banner/python.svg", "assets/banner/node.svg", "assets/banner/boot.svg", "assets/banner/c.svg", "assets/banner/cs.svg"] ;
+var TechIKnowcolor = ["#ff5a00", "#107dff", "#ffd138", "blue", "#2bc71d", "#68369c", "#b8b8b8", "#6c00ba"] ;
+
+var bubble = document.querySelector(".bubble") ;
+BubbleWatcher = new BoolListener() ;
+BubbleWatcher.watch(()=>{return isInViewport(document.querySelector(".techs"))}) ;
+BubbleWatcher.then(()=>{
+    document.querySelector(".bubble").style.opacity = 1 ;
+    setTimeout(()=>{techs()},500);
+    BubbleWatcher.enable(false);
+});
+BubbleWatcher.else(()=>{
+});
+BubbleWatcher.enable(true);
+//  Techs I Know buttons active
+
+var techno = 0 ;
+
+var ChangeTech = (arr) => {
+    if (arr=="left" && techno>0)
+    {
+        techno--;
+    }
+    else if (arr=="right" && techno<7)
+    {
+        techno++ ;
+    }
+
+    changeset.style.opacity = 0 ;
+    proimage.style.opacity = 0 ;
+    setTimeout(()=>{
+        bubble.style.animation = "bubbleanireverse 800ms forwards" ;
+        setTimeout(()=>{
+            changetext.innerHTML = TechsIKnow[techno] ;
+            proimage.src = TechsIKnowImage[techno] ;
+            bubble.style.background = TechIKnowcolor[techno] ;
+            techs();
+        },800);
+    },200) ;
+} ;
+
+
 if (isInViewport(document.querySelector(".covervid")))
 {
     document.querySelector(".covervid").currentTime = 0;

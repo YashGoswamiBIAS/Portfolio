@@ -6,6 +6,8 @@ var title = document.querySelector(".title") ;
 var subtitle = document.querySelector(".subtitle") ;
 var body = document.querySelector("body") ;
 
+scrollTo(0,0);
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
