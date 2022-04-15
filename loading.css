@@ -1,10 +1,21 @@
-@keyframes test {
+@keyframes loaderanime {
     from
     {
         position: absolute;
         bottom: 50%;
     }
     to{
+        bottom: -100%;
+    }
+
+}
+@keyframes loaderanimerev {
+    to
+    {
+        position: absolute;
+        bottom: 50%;
+    }
+    from{
         bottom: -100%;
     }
 

@@ -57,10 +57,10 @@ body.style.overflow = "hidden" ;
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(()=>{
         body.style.overflow = "scroll" ;
-        loader.style.animation = "test 1s forwards";
+        loader.style.animation = "loaderanime 1s forwards";
         setTimeout(()=>{
             welcome.style.opacity = 0 ;
-            setTimeout(()=>{welcome.remove();},1000);
+            setTimeout(()=>{welcome.style.zIndex = -100;},1000);
             if (window.innerWidth < window.innerHeight)
             {
                 circle.style.animation = "circlepor 1s";
@@ -79,3 +79,24 @@ document.addEventListener('DOMContentLoaded', function() {
         },1000);
     },500)
 }, false);
+
+var Loader = {
+        off : () => {
+            setTimeout(()=>{
+                loader.style.animation = "loaderanime 1s forwards";
+                setTimeout(()=>{
+                    welcome.style.opacity = 0 ;
+                    setTimeout(()=>{welcome.style.zIndex = -100;},1000);
+                },1000) ;
+            },500);
+        },
+        on :() => {
+            setTimeout(()=>{
+                welcome.style.zIndex = 100;
+                welcome.style.opacity = 1 ;
+                setTimeout(()=>{
+                    loader.style.animation = "loaderanimerev 1s forwards";
+                },1000) ;
+            },500);
+        }
+}

@@ -5,8 +5,10 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="screen.css">
     <script src="ui.js"></script>
     <script src="script.js" defer></script>
+    <script src="screen.js" defer></script>
     <script src="loader.js" defer></script>
 </head>
 <body>
@@ -14,56 +16,69 @@
 <div class="welcome">
     <span class="loader"></span>
 </div>
-<div class="mainEntry">
-    <div class="lbls">
-        <label class="fon title">Welcome...</label>
-        <label class="fon subtitle">Hey There...</label>
-    </div>
-    <video class="covervid" muted>
-        <source src="assets/cover.mp4">
-    </video>
-    <div class="cut">
-        <div class="circle"></div>
-    </div>
-</div>
-<div class="article">
-    <div class="head">Introduction</div>
-    <div class="note">
-        My name is Yash Goswami. I am from Hisar, Haryana. Talking about my educational qualification recently I have done my intermediate education from New Yashoda Public School and doing Engineering in Electronics from Birla Institute Of Applied Sciences. Coming to my family background, we are 4 members including me. My father is a Senior Manager in jindal stainless steel JSL branch, my mother is a Principal and Director of a Primary School and I have an younger brother.
-    </div>
-</div>
-<div class="sections">
-    <div class="card carda">
-        <video class="video vid1" muted>
-            <source src="assets/Personal%20data.mp4">
+<div class="HomeSCR Screen">
+<div class="HomeSCRsem">
+    <div class="mainEntry">
+        <div class="lbls">
+            <label class="fon title">Welcome...</label>
+            <label class="fon subtitle">Hey There...</label>
+        </div>
+        <video class="covervid" muted>
+            <source src="assets/cover.mp4">
         </video>
-        <label class="heading per">Personal Details</label>
+        <div class="cut">
+            <div class="circle"></div>
+        </div>
     </div>
-    <div class="card cardb">
-        <video class="video vid2" muted>
-            <source src="assets/Creative%20team.mp4">
-        </video>
-        <label class="heading res">My Research</label>
+    <div class="article">
+        <div class="head">Introduction</div>
+        <div class="note">
+            My name is Yash Goswami. I am from Hisar, Haryana. Talking about my educational qualification recently I have done my intermediate education from New Yashoda Public School and doing Engineering in Electronics from Birla Institute Of Applied Sciences. Coming to my family background, we are 4 members including me. My father is a Senior Manager in jindal stainless steel JSL branch, my mother is a Principal and Director of a Primary School and I have an younger brother.
+        </div>
     </div>
-    <div class="card cardc">
-        <video class="video vid3" muted>
-            <source src="assets/Team%20goals.mp4">
-        </video>
-        <label class="heading goal">My Goals</label>
+    <div class="sections">
+        <div class="card carda">
+            <video class="video vid1" muted>
+                <source src="assets/Personal%20data.mp4">
+            </video>
+            <label class="heading per">About Me</label>
+            <div class="explore cardaexp">EXPLORE</div>
+        </div>
+        <div class="card cardb">
+            <video class="video vid2" muted>
+                <source src="assets/Creative%20team.mp4">
+            </video>
+            <label class="heading res">My Research</label>
+            <div class="explore cardbexp">EXPLORE</div>
+        </div>
+        <div class="card cardc">
+            <video class="video vid3" muted>
+                <source src="assets/Team%20goals.mp4">
+            </video>
+            <label class="heading goal">My Goals</label>
+            <div class="explore cardcexp">EXPLORE</div>
+        </div>
     </div>
-</div>
-<div class="cons">Techs I have Tried</div>
+    <div class="cons">Techs I have Tried</div>
 
-<div class="techs">
-    <div class="bubble"></div>
-    <div class="changeset">
-        <span class="changebuttons leftbtn" onclick='ChangeTech("left")'><</span>
-        <label class="changetext">HTML</label>
-        <span class="changebuttons rightbtn" onclick='ChangeTech("right")'>></span>
+    <div class="techs">
+        <div class="bubble"></div>
+        <div class="changeset">
+            <span class="changebuttons leftbtn" onclick='ChangeTech("left")'><</span>
+            <label class="changetext">HTML</label>
+            <span class="changebuttons rightbtn" onclick='ChangeTech("right")'>></span>
+        </div>
+        <img class="proimage" src="assets/banner/html.svg"></img>
     </div>
-    <img class="proimage" src="assets/banner/html.svg"></img>
-</div>
 
+</div>
+</div>
+<div class="AboutMe Screen">
+    <div class="AboutMesem">
+        <label>About Me Section</label>
+        <div class="backbtn"><</div>
+    </div>
+</div>
 <div last></div>
 </body>
 </html>

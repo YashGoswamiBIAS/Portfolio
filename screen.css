@@ -1,0 +1,9 @@
+.Screen
+{
+    opacity: 1;
+    transition: opacity 500ms;
+}
+.AboutMe
+{
+    z-index: 5;
+}
