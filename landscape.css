@@ -1,0 +1,376 @@
+@media (orientation: landscape){
+    .aboutmeVid
+    {
+        height: 50vh;
+        width: 50vh;
+        margin: 100px;
+        border-radius: 50px;
+        opacity: 0.8;
+    }
+    .aboutme
+    {
+        position: relative;
+        z-index: 5;
+        width: 100vw;
+        display: flex;
+        height: 600px;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .HEAD01
+    {
+        font-family: Corb;
+        font-size: 50px;
+        color: #454545;
+        margin-bottom: 20px;
+    }
+    .sider
+    {
+        display: grid;
+        padding: 20px;
+        transition: opacity 800ms;
+        opacity: 0;
+    }
+    .PARRA01
+    {
+        font-family: Consolas;
+        font-size: 25px;
+        color: #454545;
+
+    }
+    .backbtn
+    {
+        height: 50px;
+        width: 50px;
+        background: #ffffff;
+        z-index: 5;
+        color: #505050;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        border-radius: 50%;
+        font-size: 40px;
+        font-family: Consolas;
+        display: grid;
+        place-items: center;
+        box-shadow: 2px 2px 20px #747474;
+    }
+    .note
+    {
+        font-family: Consolas;
+        margin: 60px;
+        font-size: 20px;
+    }
+    .techs
+    {
+        z-index: 5;
+        height: 500px;
+        width: 1050px;
+        border-radius: 40px;
+        box-shadow: 2px 2px 10px #aaaaaa;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        justify-self: center;
+    }
+    .proimage{
+        height: 200px;
+        width: 200px;
+        position: absolute;
+        right: 0px;
+        margin-right: 20px;
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: right center;
+        transition: opacity 500ms;
+        opacity: 0;
+    }
+    .bubble
+    {
+        height: 00px;
+        position: absolute;
+        width: 00px;
+        background: #ff5a00;
+        border-radius: 50%;
+        transition: all 800ms;
+        transform: translate(-50%,0px);
+    }
+    [last]
+    {
+        height: 100px;
+        width: 100vw;
+    }
+    .cons
+    {
+        font-family: Corb;
+        font-size: 60px;
+        margin:20px;
+        display: flex;
+        justify-content: center;
+        color: #2f2f2f;
+        font-family: "Corbel Light";
+        z-index: 5;
+    }
+    @keyframes bubbleani {
+        from
+        {
+            height: 0px;
+            width: 0px;
+        }
+        to
+        {
+            height:800px;
+            width: 800px;
+        }
+    }
+    @keyframes bubbleanireverse {
+        to
+        {
+            height: 0px;
+            width: 0px;
+        }
+        from
+        {
+            height:800px;
+            width: 800px;
+
+        }
+    }
+    .changeset
+    {
+        margin: 100px;
+        font-size: 60px;
+        color: white;
+        text-shadow: 2px 2px 5px #686868;
+        user-select: none;
+        z-index: 1;
+        transition: opacity 500ms;
+        opacity: 0;
+    }
+    .changetext{
+        font-family: Corb;
+    }
+    .changebuttons
+    {
+        font-family: Consolas;
+        font-size: 80px;
+        font-weight: bold;
+        transition: all 1s;
+    }
+
+    .fon
+    {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 2s;
+        z-index: 5;
+    }
+    .covervid
+    {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        opacity: 1;
+        border-radius: 20px;
+        height: 800px;
+        width: 800px;
+        box-shadow: 2px 2px 20px 2px white;
+    }
+    .mainEntry{
+        height: 120vh;
+        width: 100vw;
+        display: flex;
+        align-items: start;
+        overflow: hidden;
+    }
+    .cut{
+        height: 100vh;
+        width: 100vh;
+        background: transparent;
+        transform: rotate(180deg);
+        position: absolute;
+        overflow: hidden;
+        top: 0px;
+        left: 0px;
+    }
+    .circle{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 200vh;
+        width: 200vh;
+        background: #6565ff;
+        border-radius: 50%;
+    }
+    @keyframes opening  {
+        from
+        {
+            transform: translate(-100%,-100%) rotate(180deg);
+        }
+        to
+        {
+            transform: translate(0%,0%) rotate(180deg);
+        }
+    }
+    @keyframes openingrev  {
+        to
+        {
+            transform: translate(-100%,-100%) rotate(180deg);
+        }
+        from
+        {
+            transform: translate(0%,0%) rotate(180deg);
+        }
+    }
+    .fon
+    {
+        top: 300px;
+        left : 300px;
+    }
+    .title
+    {
+        font-family: Corb;
+        font-size : 100px;
+        color: white;
+        text-shadow: 2px 2px 5px #505050;
+    }
+    .subtitle
+    {
+        font-family: Consolas;
+        font-size : 40px;
+        color: white;
+        text-shadow: 2px 2px 5px #505050;
+        transform: translate(20px,100px);
+    }
+    .heading{
+        font-family: Corb;
+        font-size: 25px;
+    }
+    .sections
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .card
+    {
+        height: 500px;
+        width: 300px;
+        background: white;
+        box-shadow: 5px 5px 20px 1px #adadad;
+        border-radius: 20px;
+        margin: 40px;
+        opacity: 0.7;
+        transition: all 1s;
+        position: relative;
+    }
+    .card:hover{
+        opacity: 0.4;
+    }
+    .carda::before{
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 0px;
+        content: "";
+        height: 0px;
+        width: 300px;
+        background-color: rgba(255, 107, 107, 0.51);
+        transition: all 500ms;
+    }
+    .cardb::before{
+        display: grid;
+        place-items: center;
+        content: "";
+        opacity: 0;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 0px;
+        content: "";
+        height: 0px;
+        width: 300px;
+        background-color: rgba(255, 107, 107, 0.51);
+        transition: all 500ms,  color 0s;
+        color: rgba(255, 0, 0, 0);
+    }
+    .cardc::before{
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        border-radius: 20px;
+        position: absolute;
+        bottom: 0px;
+        content: "";
+        height: 0px;
+        width: 300px;
+        background-color: rgba(255, 107, 107, 0.51);
+        transition: all 500ms;
+    }
+    @keyframes latetext {
+        0%{
+            color: white;
+        }
+        60%
+        {
+            color: white;
+        }
+        100%
+        {
+            color: black;
+        }
+    }
+    .carda:hover::before{
+        opacity: 1;
+        padding: 30px;
+        font-family: Corb;
+        font-size: 25px;
+        content: "This Section tells about myself by which you can see my hobbies old me and see some pictures of my past.";
+        animation: latetext 1s forwards;
+        position: absolute;
+        height: 440px;
+        width: 240px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    .cardb:hover::before{
+        opacity: 1;
+        padding: 30px;
+        font-family: Corb;
+        font-size: 25px;
+        content: "In my free time, I use to search for tech and explore things. maybe you find it interesting.";
+        animation: latetext 1s forwards;
+        position: absolute;
+        height: 440px;
+        width: 240px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    .cardc:hover::before{
+        opacity: 1;
+        padding: 30px;
+        font-family: Corb;
+        font-size: 25px;
+        content: "I am very curious about my objectives. See you will also find it useful. I will do some fascinating research in future.";
+        animation: latetext 1s forwards;
+        position: absolute;
+        height: 440px;
+        width: 240px;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    .video
+    {
+        opacity: 0;
+        transition: opacity 1s;
+        height: 300px;
+        width: 300px;
+        border-radius: 20px;
+        background: url("assets/Personal data.mp4");
+    }
+}
+.backbtn{
+    user-select: none;
+}

@@ -2,6 +2,8 @@ var vid1 = document.querySelector(".vid1");
 var vid2 = document.querySelector(".vid2");
 var vid3 = document.querySelector(".vid3");
 var cover = document.querySelector(".covervid");
+var aboutmeVid = document.querySelector(".aboutmeVid");
+
 vid1.style.opacity = 1 ;
 vid2.style.opacity = 1 ;
 vid3.style.opacity = 1 ;
@@ -93,6 +95,31 @@ BubbleWatcher.then(()=>{
 BubbleWatcher.else(()=>{
 });
 BubbleWatcher.enable(true);
+
+AboutMeVid = new BoolListener() ;
+AboutMeVid.watch(()=>{return isInViewport(document.querySelector(".aboutmeVid"))}) ;
+AboutMeVid.then(()=>{
+    document.querySelector(".aboutmeVid").currentTime = 0;
+    document.querySelector(".aboutmeVid").style.opacity = 1 ;
+    setTimeout(()=>{document.querySelector(".aboutmeVid").play();},500);
+    AboutMeVid.enable(false);
+});
+AboutMeVid.else(()=>{
+});
+AboutMeVid.enable(true);
+
+Sider = new BoolListener() ;
+Sider.watch(()=>{return isInViewport(document.querySelector(".sider"))}) ;
+Sider.then(()=>{
+    setTimeout(()=>{document.querySelector(".sider").style.opacity = 1 ;},800) ;
+    Sider.enable(false);
+});
+Sider.else(()=>{
+});
+Sider.enable(true);
+
+
+
 //  Techs I Know buttons active
 
 var techno = 0 ;

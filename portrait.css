@@ -1,0 +1,343 @@
+@media (orientation: portrait) {
+    .aboutmeVid
+    {
+        height: 80vw;
+        width: 80vw;
+        margin: 100px;
+        border-radius: 50px;
+        opacity: 0.8;
+    }
+    .aboutme
+    {
+        position: relative;
+        z-index: 5;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        align-items: center;
+        padding: 40px;
+    }
+    .HEAD01
+    {
+        font-family: Corb;
+        font-size: 80px;
+        color: #454545;
+        margin-bottom: 20px;
+        justify-self: center;
+    }
+    .sider
+    {
+        display: grid;
+        padding: 20px;
+        transition: opacity 800ms;
+        opacity: 0;
+    }
+    .PARRA01
+    {
+        font-family: Consolas;
+        font-size: 50px;
+        color: #454545;
+
+    }
+    .backbtn
+    {
+        height: 120px;
+        width: 120px;
+        background: #ffffff;
+        z-index: 5;
+        color: #505050;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        border-radius: 50%;
+        font-size: 90px;
+        font-family: Consolas;
+        display: grid;
+        place-items: center;
+        box-shadow: 2px 2px 20px #747474;
+    }
+    .note
+    {
+        font-family: Consolas;
+        margin: 60px;
+        font-size: 40px;
+    }
+    .techs
+    {
+        z-index: 5;
+        height: 85vw;
+        width: 85vw;
+        border-radius: 40px;
+        box-shadow: 2px 2px 10px #aaaaaa;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        justify-self: center;
+    }
+    .proimage{
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        right: 50%;
+        top: 40%;
+        transform: translate(50%,-50%);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: right center;
+        transition: opacity 500ms;
+        opacity: 0;
+    }
+    .bubble
+    {
+        height:1500px;
+        width: 1500px;
+        position: absolute;
+        background: #ff5a00;
+        border-radius: 50%;
+        left: 50%;
+        transform: translate(-50%,100%);
+        transition: all 800ms;
+
+    }
+    [last]
+    {
+        height: 100px;
+        width: 100vw;
+    }
+    .cons
+    {
+        font-size: 60px;
+        margin:20px;
+        display: flex;
+        justify-content: center;
+        color: #2f2f2f;
+        font-family: "Corbel Light";
+        z-index: 5;
+    }
+    @keyframes bubbleani {
+        from
+        {
+            transform: translate(-50%,110%);
+        }
+        to
+        {
+            transform: translate(-50%,50%);
+        }
+    }
+    @keyframes bubbleanireverse {
+        to
+        {
+            transform: translate(-50%,110%);
+        }
+        from
+        {
+            transform: translate(-50%,50%);
+        }
+    }
+    .changeset
+    {
+        justify-self: center;
+        font-size: 60px;
+        color: white;
+        text-shadow: 2px 2px 5px #686868;
+        user-select: none;
+        z-index: 1;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        transition: opacity 500ms;
+        opacity: 0;
+        transform: translate(-50%,0px);
+        position: absolute;
+        left: 50%;
+        bottom: 20%;
+    }
+    .changetext{
+        font-family: Corb;
+        margin: 10px;
+    }
+    .changebuttons
+    {
+        font-family: Consolas;
+        font-size: 80px;
+        font-weight: bold;
+        transition: all 1s;
+    }
+
+    .covervid
+    {
+        position: absolute;
+        top: 100vh;
+        right: 0px;
+        opacity: 1;
+        border-radius: 20px;
+        height: 100vw;
+        width: 100vw;
+        z-index: 5;
+        box-shadow: 5px 5px 20px white;
+        filter: brightness(100%);
+    }
+    .mainEntry{
+        height: 150vh;
+        width: 100vw;
+        display: flex;
+        align-items: start;
+        overflow: hidden;
+    }
+    .cut{
+        height: 200vw;
+        width: 100vw;
+        background: transparent;
+        transform: rotate(180deg);
+        position: absolute;
+        overflow: hidden;
+        top: 0px;
+        left: 0px;
+    }
+    @keyframes circlepor {
+        from{
+            top : 0px ;
+            left: 0px;
+            height: 400vw;
+            width: 400vw;
+            background: #d7d7ff;
+            position: absolute;
+            transform: translate(50vw,50vh);
+            border-radius: 50%;
+        }
+        to{
+            top : 0px ;
+            left: 0px;
+            height: 300vw;
+            width: 400vw;
+            background: #6565ff;
+            position: absolute;
+            transform: translate(-40vw,15vh);
+            border-radius: 50%;
+        }
+    }
+    .circle{
+        top : 0px ;
+        left: 0px;
+        height: 300vw;
+        width: 400vw;
+        background: #6565ff;
+        position: absolute;
+        transform: translate(-40vw,15vh);
+        border-radius: 50%;
+    }
+    /*.fon*/
+    /*{*/
+    /*    position: absolute;*/
+    /*    top: 45%;*/
+    /*    left:50%;*/
+    /*}*/
+    .lbls
+    {
+        display: grid;
+        position: absolute;
+        z-index: 5;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .title
+    {
+        font-family: Corb;
+        font-size : 160px;
+        color: white;
+        text-shadow: 2px 2px 5px #787878;
+    }
+    .subtitle
+    {
+        font-family: Consolas;
+        font-size : 50px;
+        color: white;
+        text-shadow: 2px 2px 5px #787878;
+        margin-left: 20px;
+    }
+    .sections
+    {
+        display: grid;
+        justify-content: center;
+    }
+    .heading{
+        display: grid;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-family: Corb;
+        font-size: 60px;
+        position: relative;
+    }
+    .per::before{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        top: 40px;
+        font-size: 50px;
+        left:50%;
+        transform: translate(-50%,50%);
+        font-family: Corb;
+        text-align: center;
+        content: "This Section tells about myself by which you can see my hobbies old me and see some pictures of my past.";
+        width: 90%;
+    }
+    .res::before{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        top: 40px;
+        font-size: 50px;
+        left:50%;
+        transform: translate(-50%,50%);
+        font-family: Corb;
+        text-align: center;
+        content: "I am very curious about my objectives. See you will also find it useful. I will do some fascinating research in future.";
+        width: 90%;
+    }
+    .goal::before{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        top: 40px;
+        font-size: 50px;
+        left:50%;
+        transform: translate(-50%,50%);
+        font-family: Corb;
+        text-align: center;
+        content: "I am very curious about my objectives. See you will also find it useful. I will do some fascinating research in future.";
+        width: 90%;
+    }
+    .mainBox
+    {
+        display: grid;
+    }
+    .card
+    {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: 85vh;
+        width: 85vw;
+        background: white;
+        box-shadow: 5px 5px 20px 1px #adadad;
+        border-radius: 20px;
+        margin: 40px;
+        opacity: 0.7;
+        position: relative;
+    }
+    .video
+    {
+        align-self: start;
+        opacity: 0;
+        justify-self: center;
+        transition: opacity 1s;
+        height: 80vw;
+        width: 80vw;
+        border-radius: 20px;
+        background: url("assets/Personal data.mp4");
+    }
+}
