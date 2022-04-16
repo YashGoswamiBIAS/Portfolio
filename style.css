@@ -71,29 +71,29 @@ body{
     display: grid;
     place-items: center;
 }
-.backbtn
-{
-    height: 120px;
-    width: 120px;
-    background: #ffffff;
-    z-index: 5;
-    color: #505050;
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    border-radius: 50%;
-    font-size: 90px;
-    font-family: Consolas;
-    display: grid;
-    place-items: center;
-    box-shadow: 2px 2px 20px #747474;
-}
 .HomeSCRsem
 {
     display: grid;
     justify-content: center;
 }
 @media (orientation: landscape){
+    .backbtn
+    {
+        height: 50px;
+        width: 50px;
+        background: #ffffff;
+        z-index: 5;
+        color: #505050;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        border-radius: 50%;
+        font-size: 40px;
+        font-family: Consolas;
+        display: grid;
+        place-items: center;
+        box-shadow: 2px 2px 20px #747474;
+    }
     .note
     {
         font-family: Consolas;
@@ -400,7 +400,27 @@ body{
         background: url("assets/Personal data.mp4");
     }
 }
+.backbtn{
+    user-select: none;
+}
 @media (orientation: portrait) {
+    .backbtn
+    {
+        height: 120px;
+        width: 120px;
+        background: #ffffff;
+        z-index: 5;
+        color: #505050;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        border-radius: 50%;
+        font-size: 90px;
+        font-family: Consolas;
+        display: grid;
+        place-items: center;
+        box-shadow: 2px 2px 20px #747474;
+    }
     .note
     {
         font-family: Consolas;

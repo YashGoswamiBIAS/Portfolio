@@ -46,12 +46,13 @@ if (window.innerWidth < window.innerHeight)
     }
 }
 
-// Screen Loader Section
-HomeScreen.on() ;
-AboutMe.off();
 
 var backbtn = document.querySelector(".backbtn") ;
 backbtn.onclick = async ()=>{
     AboutMe.off();
     HomeScreen.on() ;
 }
+
+// Screen Loader Section
+HomeScreen.on() ;
+AboutMe.off();
