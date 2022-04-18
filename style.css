@@ -100,3 +100,13 @@ body{
 {
     z-index: 5;
 }
+.disp
+{
+
+    z-index: 5;
+}
+#aboutmeext
+{
+    opacity: 0;
+    transition: opacity 1s;
+}

@@ -102,21 +102,13 @@ AboutMeVid.then(()=>{
     document.querySelector(".aboutmeVid").currentTime = 0;
     document.querySelector(".aboutmeVid").style.opacity = 1 ;
     setTimeout(()=>{document.querySelector(".aboutmeVid").play();},500);
+    setTimeout(()=>{document.querySelector(".sider").style.opacity = 1 ;},500) ;
+    setTimeout(()=>{document.querySelector("#aboutmeext").style.opacity = 1 ;},500) ;
     AboutMeVid.enable(false);
 });
 AboutMeVid.else(()=>{
 });
 AboutMeVid.enable(true);
-
-Sider = new BoolListener() ;
-Sider.watch(()=>{return isInViewport(document.querySelector(".sider"))}) ;
-Sider.then(()=>{
-    setTimeout(()=>{document.querySelector(".sider").style.opacity = 1 ;},800) ;
-    Sider.enable(false);
-});
-Sider.else(()=>{
-});
-Sider.enable(true);
 
 
 
@@ -184,57 +176,4 @@ if (isInViewport(document.querySelector(".vid3")))
     VideoListener3.enable(false);
 }
 
-var Section1 = new BoolListener() ;
-Section1.watch(()=>{
-    return document.querySelector(".carda").matches(":hover") ;
-}) ;
-Section1.then(()=>{
-    document.querySelector(".cardaexp").style.display = "block" ;
-    setTimeout(()=>{
-        document.querySelector(".cardaexp").style.opacity = 1 ;
-    },300) ;
-}) ;
-Section1.else(()=>{
-    document.querySelector(".cardaexp").style.opacity = 0 ;
-    setTimeout(()=>{
-        document.querySelector(".cardaexp").style.display = "none" ;
-    },300) ;
-}) ;
-Section1.enable(true);
-
-var Section2 = new BoolListener() ;
-Section2.watch(()=>{
-    return document.querySelector(".cardb").matches(":hover") ;
-}) ;
-Section2.then(()=>{
-    document.querySelector(".cardbexp").style.display = "block" ;
-    setTimeout(()=>{
-        document.querySelector(".cardbexp").style.opacity = 1 ;
-    },300) ;
-}) ;
-Section2.else(()=>{
-    document.querySelector(".cardbexp").style.opacity = 0 ;
-    setTimeout(()=>{
-        document.querySelector(".cardbexp").style.display = "none" ;
-    },300) ;
-}) ;
-Section2.enable(true);
-
-var Section3 = new BoolListener() ;
-Section3.watch(()=>{
-    return document.querySelector(".cardc").matches(":hover") ;
-}) ;
-Section3.then(()=>{
-    document.querySelector(".cardcexp").style.display = "block" ;
-    setTimeout(()=>{
-        document.querySelector(".cardcexp").style.opacity = 1 ;
-    },300) ;
-}) ;
-Section3.else(()=>{
-    document.querySelector(".cardcexp").style.opacity = 0 ;
-    setTimeout(()=>{
-        document.querySelector(".cardcexp").style.display = "none" ;
-    },300) ;
-}) ;
-Section3.enable(true);
 
