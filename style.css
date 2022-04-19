@@ -12,20 +12,13 @@
 .article{
     width: 100vw;
     z-index: 5;
+    justify-self: center;
 }
 /* SAMPLE */
 
 /* SAMPLE */
 html {
     scroll-behavior: smooth;
-}
-.head
-{
-    font-family: Corb;
-    font-size: 80px;
-    margin:20px;
-    display: flex;
-    justify-content: center;
 }
 .welcome
 {
@@ -57,7 +50,6 @@ body{
     font-family: Corb;
     src: url("assets/corbert-condensed/The Northern Block - Corbert Condensed Medium.otf");
 }
-
 .card
 {
     display: grid;
@@ -105,8 +97,12 @@ body{
 
     z-index: 5;
 }
-#aboutmeext
+.HomeSCR{
+    justify-self: center;
+}
+
+/* Color Picker */
+Color
 {
-    opacity: 0;
-    transition: opacity 1s;
+    color: rgba(0, 0, 0, 0);
 }

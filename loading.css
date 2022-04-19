@@ -26,10 +26,10 @@
     bottom: 50%;
     transform: translate(0px,0px);
     transition: all 500s;
-    height: 10vh;
-    width: 10vh;
-    background: url("assets/1493.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    height: 30vh;
+    width: 30vh;
+    /*background: url("assets/1493.gif");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
 }

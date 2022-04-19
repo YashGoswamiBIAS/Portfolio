@@ -1,77 +1,4 @@
 @media (orientation: portrait) {
-    .aboutmeVid
-    {
-        height: 80vw;
-        width: 80vw;
-        margin: 100px;
-        border-radius: 50px;
-        opacity: 0.8;
-    }
-    .aboutme
-    {
-        position: relative;
-        z-index: 5;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /*padding: 40px;*/
-    }
-    .HEAD01
-    {
-        font-family: Corb;
-        font-size: 80px;
-        color: #454545;
-        margin-bottom: 40px;
-        justify-self: center;
-    }
-    .sider
-    {
-        display: grid;
-        padding: 80px;
-        transition: opacity 800ms;
-        opacity: 0;
-        padding: 80px;
-        padding-bottom: 20px;
-        filter: brightness(100%);
-    }
-    .PARRA01
-    {
-        font-family: Corb;
-        font-size: 50px;
-        color:#6c6c6c;
-    }
-    .fullwidthparra
-    {
-        font-family: Corb;
-        padding: 80px;
-        padding-top: 0px;
-        font-size: 40px;
-        color: #6c6c6c;
-    }
-    .backbtn
-    {
-        height: 120px;
-        width: 120px;
-        background: #ffffff;
-        z-index: 5;
-        color: #505050;
-        position: fixed;
-        bottom: 50px;
-        right: 50px;
-        border-radius: 50%;
-        font-size: 90px;
-        font-family: Consolas;
-        display: grid;
-        place-items: center;
-        box-shadow: 2px 2px 20px #747474;
-    }
-    .note
-    {
-        font-family: Consolas;
-        margin: 60px;
-        font-size: 40px;
-    }
     .techs
     {
         z-index: 5;
@@ -122,7 +49,7 @@
         margin:20px;
         display: flex;
         justify-content: center;
-        color: #2f2f2f;
+        color: #5e5e5e;
         font-family: "Corbel Light";
         z-index: 5;
     }
@@ -190,7 +117,7 @@
         filter: brightness(100%);
     }
     .mainEntry{
-        height: 150vh;
+        height: 160vh;
         width: 100vw;
         display: flex;
         align-items: start;
@@ -337,6 +264,7 @@
         margin: 40px;
         opacity: 0.7;
         position: relative;
+        overflow: hidden;
     }
     .video
     {
