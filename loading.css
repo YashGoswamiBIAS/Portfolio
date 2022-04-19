@@ -28,6 +28,7 @@
     transition: all 500s;
     height: 30vh;
     width: 30vh;
+    filter: brightness(110%);
     /*background: url("assets/1493.gif");*/
     /*background-repeat: no-repeat;*/
     /*background-position: center;*/
