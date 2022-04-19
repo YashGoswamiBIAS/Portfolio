@@ -98,3 +98,37 @@ var Loader = {
             },500);
         }
 }
+
+var Home = new Screen(document.querySelector(".HomeSCR")) ;
+var StoryAboutMe = new Screen(document.querySelector(".StoryAboutMe")) ;
+
+var URLChecker = new BoolListener() ;
+var URLParams ;
+URLChecker.watch(()=>{
+    var bol ;
+    bol = !(location.hash == "") ;
+    return bol ;
+}) ;
+URLChecker.then(()=>{
+    if (location.hash=="#aboutme")
+    {
+        Loader.on() ;
+        setTimeout(()=>{
+            Home.off() ;
+            StoryAboutMe.on();
+            Loader.off();
+        },1000) ;
+    }
+}) ;
+URLChecker.else(()=>{
+    if (location.hash=="")
+    {
+        Loader.on();
+        setTimeout(()=>{
+            Home.on();
+            StoryAboutMe.off();
+            Loader.off();
+        },1000) ;
+    }
+}) ;
+URLChecker.enable(true);

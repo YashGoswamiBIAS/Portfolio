@@ -176,4 +176,3 @@ if (isInViewport(document.querySelector(".vid3")))
     VideoListener3.enable(false);
 }
 
-
