@@ -5,11 +5,41 @@ var cut = document.querySelector(".cut") ;
 var title = document.querySelector(".title") ;
 var subtitle = document.querySelector(".subtitle") ;
 var body = document.querySelector("body") ;
-var illustration = document.querySelector(".illustration") ;
+var VideoBox = document.querySelector("#VideoBox") ;
 scrollTo(0,0);
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Video Load Sections
+
+var video = (src) => {
+    var vid = document.createElement("video");
+    vid.classList.add("illustration");
+    var source = document.createElement("source") ;
+    source.src = src ;
+    vid.append(source) ;
+    vid.load();
+    return vid ;
+}
+
+// Movie Display Sections
+
+
+var MovieDisplay = {
+    play : (Video) => {
+        VideoBox.style.opacity = 0 ;
+        setTimeout(()=>{
+            VideoBox.innerHTML = "" ;
+            setTimeout(()=>{
+                VideoBox.append(Video);
+                Video.style.opacity = 1 ;
+                VideoBox.style.opacity = 1 ;
+                Video.play();
+            },500);
+        },500);
+    }
 }
 
 async function typer(obj,text) {
@@ -83,66 +113,41 @@ var Loader = {
         }
 }
 
+
+var Hello_Video = video("assets/hello.mp4");
+var HomeTown_Video = video("assets/beautiful-city.mp4");
+var Student_Video = video("assets/student.mp4") ;
+var Work_Video = video("assets/work.mp4");
+var Uttrakhand_Video = video("assets/forest.mp4");
+var Collage_Video = video("assets/collage.mp4" );
+var Thanks_Video = video("assets/thanks-button.mp4");
+
+
+
 var AboutMeAnimetion = async (obj) => {
-    illustration.style.opacity = 0 ;
-    await sleep(500);
-    await illustration.load();
-    illustration.src = "assets/hello.mp4" ;
-    illustration.style.opacity = 1 ;
-    await illustration.load();
-    illustration.play() ;
     await sleep(1000);
+    MovieDisplay.play(Hello_Video);
     await typer(obj,"Hello I am Yash Goswami.");
     await sleep(1000);
-    illustration.style.opacity = 0 ;
-    await sleep(500);
-    illustration.src = "assets/beautiful-city.mp4" ;
-    illustration.style.opacity = 1 ;
-    await illustration.load();
-    illustration.play() ;
+    MovieDisplay.play(HomeTown_Video);
     await typer(obj,"I am from Hisar, Haryana.");
-    await sleep(1000);
-    illustration.style.opacity = 0 ;
-    await sleep(500);
-    illustration.src = "assets/student.mp4" ;
-    illustration.style.opacity = 1 ;
-    await illustration.load();
-    illustration.play() ;
+    await sleep(2000);
+    MovieDisplay.play(Student_Video);
     await typer(obj,"I am a Student.");
     await sleep(1000);
     await typer(obj,"Taking about my technical knowledge.");
     await sleep(1000);
-    illustration.style.opacity = 0 ;
-    await sleep(500);
-    illustration.src = "assets/work.mp4" ;
-    illustration.style.opacity = 1 ;
-    await illustration.load();
-    illustration.play() ;
+    MovieDisplay.play(Work_Video);
     await typer(obj,"I know Multiple languages but not mastered anyone.");
     await sleep(1000);
-    illustration.style.opacity = 0 ;
-    await sleep(500);
-    illustration.src = "assets/forest.mp4" ;
-    illustration.style.opacity = 1 ;
-    await illustration.load();
-    illustration.play() ;
+    MovieDisplay.play(Uttrakhand_Video);
     await typer(obj,"I was Born in Kashipur, Uttrakhand.");
     await sleep(1000);
-    illustration.style.opacity = 0 ;
-    await sleep(500);
-    illustration.src = "assets/collage.mp4" ;
-    illustration.style.opacity = 1 ;
-    await illustration.load();
-    illustration.play() ;
-    setTimeout(()=>{illustration.pause()},2500) ;
+    MovieDisplay.play(Collage_Video);
+    setTimeout(()=>{Collage_Video.pause()},2500) ;
     await typer(obj,"Currently Doing B-tech from birla institute of applied sciennces");
     await sleep(1000);
-    illustration.style.opacity = 0 ;
-    await sleep(500);
-    illustration.src = "assets/thanks-button.mp4" ;
-    illustration.style.opacity = 1 ;
-    await illustration.load();
-    illustration.play() ;
+    MovieDisplay.play(Thanks_Video);
     await typer(obj,"Thanks for visiting our site.");
     await  sleep(1000);
     await typer(obj,"Taking you back to Home Screen");

@@ -298,7 +298,7 @@
     {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        height: 85vh;
+        height: 150vw;
         width: 85vw;
         background: white;
         box-shadow: 5px 5px 20px 1px #adadad;
