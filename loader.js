@@ -86,8 +86,10 @@ var Loader = {
 var AboutMeAnimetion = async (obj) => {
     illustration.style.opacity = 0 ;
     await sleep(500);
+    await illustration.load();
     illustration.src = "assets/hello.mp4" ;
     illustration.style.opacity = 1 ;
+    await illustration.load();
     illustration.play() ;
     await sleep(1000);
     await typer(obj,"Hello I am Yash Goswami.");
@@ -96,6 +98,7 @@ var AboutMeAnimetion = async (obj) => {
     await sleep(500);
     illustration.src = "assets/beautiful-city.mp4" ;
     illustration.style.opacity = 1 ;
+    await illustration.load();
     illustration.play() ;
     await typer(obj,"I am from Hisar, Haryana.");
     await sleep(1000);
@@ -103,6 +106,7 @@ var AboutMeAnimetion = async (obj) => {
     await sleep(500);
     illustration.src = "assets/student.mp4" ;
     illustration.style.opacity = 1 ;
+    await illustration.load();
     illustration.play() ;
     await typer(obj,"I am a Student.");
     await sleep(1000);
@@ -112,6 +116,7 @@ var AboutMeAnimetion = async (obj) => {
     await sleep(500);
     illustration.src = "assets/work.mp4" ;
     illustration.style.opacity = 1 ;
+    await illustration.load();
     illustration.play() ;
     await typer(obj,"I know Multiple languages but not mastered anyone.");
     await sleep(1000);
@@ -119,6 +124,7 @@ var AboutMeAnimetion = async (obj) => {
     await sleep(500);
     illustration.src = "assets/forest.mp4" ;
     illustration.style.opacity = 1 ;
+    await illustration.load();
     illustration.play() ;
     await typer(obj,"I was Born in Kashipur, Uttrakhand.");
     await sleep(1000);
@@ -126,6 +132,7 @@ var AboutMeAnimetion = async (obj) => {
     await sleep(500);
     illustration.src = "assets/collage.mp4" ;
     illustration.style.opacity = 1 ;
+    await illustration.load();
     illustration.play() ;
     setTimeout(()=>{illustration.pause()},2500) ;
     await typer(obj,"Currently Doing B-tech from birla institute of applied sciennces");
@@ -134,6 +141,7 @@ var AboutMeAnimetion = async (obj) => {
     await sleep(500);
     illustration.src = "assets/thanks-button.mp4" ;
     illustration.style.opacity = 1 ;
+    await illustration.load();
     illustration.play() ;
     await typer(obj,"Thanks for visiting our site.");
     await  sleep(1000);
