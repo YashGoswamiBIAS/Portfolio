@@ -103,7 +103,6 @@ var Home = new Screen(document.querySelector(".HomeSCR")) ;
 var StoryAboutMe = new Screen(document.querySelector(".StoryAboutMe")) ;
 
 var URLChecker = new BoolListener() ;
-var URLParams ;
 URLChecker.watch(()=>{
     var bol ;
     bol = !(location.hash == "") ;
@@ -132,3 +131,14 @@ URLChecker.else(()=>{
     }
 }) ;
 URLChecker.enable(true);
+
+if (location.hash=="#aboutme")
+{
+    Home.off() ;
+    StoryAboutMe.on();
+}
+else
+{
+    Home.on();
+    StoryAboutMe.off();
+}

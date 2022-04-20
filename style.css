@@ -106,3 +106,9 @@ Color
 {
     color: rgba(0, 0, 0, 0);
 }
+.StoryAboutMe
+{
+    height: 100vh;
+    width: 100vw;
+    background: lightskyblue;
+}
