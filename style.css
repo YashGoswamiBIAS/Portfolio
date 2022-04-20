@@ -112,3 +112,7 @@ Color
     width: 100vw;
     background: lightskyblue;
 }
+.illustration
+{
+    filter: brightness(110%);
+}
