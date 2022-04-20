@@ -23,11 +23,13 @@
         display: grid;
         align-self: center;
         margin-left: 50px;
+        width: 400px;
     }
     .Narrator
     {
         font-size: 80px;
         font-family: "Corbel Light";
+        width: 400px;
     }
     .speach
     {

@@ -100,19 +100,15 @@ body{
 .HomeSCR{
     justify-self: center;
 }
-
-/* Color Picker */
-Color
-{
-    color: rgba(0, 0, 0, 0);
-}
 .StoryAboutMe
 {
     height: 100vh;
     width: 100vw;
-    background: lightskyblue;
+    background: #daeeff;
 }
 .illustration
 {
+    opacity: 0;
     filter: brightness(110%);
+    transition: opacity 500ms;
 }

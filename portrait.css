@@ -29,6 +29,7 @@
     {
         font-size: 120px;
         font-family: "Corbel Light";
+        text-align: center;
     }
     .speach
     {
@@ -37,6 +38,8 @@
         justify-self: center;
         font-weight: bold;
         color: #787878;
+        width: 70vw;
+        text-align: center;
     }
     .techs
     {

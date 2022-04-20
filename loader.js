@@ -5,52 +5,36 @@ var cut = document.querySelector(".cut") ;
 var title = document.querySelector(".title") ;
 var subtitle = document.querySelector(".subtitle") ;
 var body = document.querySelector("body") ;
-
+var illustration = document.querySelector(".illustration") ;
 scrollTo(0,0);
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+async function typer(obj,text) {
+    obj.innerHTML = "" ;
+    for (let i=0; i< text.length; i++)
+    {
+        obj.innerHTML = obj.innerHTML + text[i] ;
+        await sleep(100);
+    }
+}
 var welcometexts = async () => {
-    subtitle.innerHTML = "" ;
     text = "I am Yash goswami" ;
-    for (let i=0; i< text.length; i++)
-    {
-        subtitle.innerHTML = subtitle.innerHTML + text[i] ;
-        await sleep(100);
-    }
+    await typer(subtitle,text);
     await  sleep(1000);
-    subtitle.innerHTML = "" ;
     text = "I am a Student" ;
-    for (let i=0; i< text.length; i++)
-    {
-        subtitle.innerHTML = subtitle.innerHTML + text[i] ;
-        await sleep(100);
-    }
+    await typer(subtitle,text);
     await  sleep(1000);
-    subtitle.innerHTML = "" ;
     text = "Situated in Hisar, Haryana" ;
-    for (let i=0; i< text.length; i++)
-    {
-        subtitle.innerHTML = subtitle.innerHTML + text[i] ;
-        await sleep(100);
-    }
+    await typer(subtitle,text);
     await  sleep(1000);
-    subtitle.innerHTML = "" ;
     text = "This is my portfolio" ;
-    for (let i=0; i< text.length; i++)
-    {
-        subtitle.innerHTML = subtitle.innerHTML + text[i] ;
-        await sleep(100);
-    }
+    await typer(subtitle,text);
     await  sleep(1000);
-    subtitle.innerHTML = "" ;
     text = "Explore..." ;
-    for (let i=0; i< text.length; i++)
-    {
-        subtitle.innerHTML = subtitle.innerHTML + text[i] ;
-        await sleep(100);
-    }
+    await typer(subtitle,text);
 } ;
 
 body.style.overflow = "hidden" ;
@@ -99,6 +83,66 @@ var Loader = {
         }
 }
 
+var AboutMeAnimetion = async (obj) => {
+    illustration.style.opacity = 0 ;
+    await sleep(500);
+    illustration.src = "assets/hello.mp4" ;
+    illustration.style.opacity = 1 ;
+    illustration.play() ;
+    await sleep(1000);
+    await typer(obj,"Hello I am Yash Goswami.");
+    await sleep(1000);
+    illustration.style.opacity = 0 ;
+    await sleep(500);
+    illustration.src = "assets/beautiful-city.mp4" ;
+    illustration.style.opacity = 1 ;
+    illustration.play() ;
+    await typer(obj,"I am from Hisar, Haryana.");
+    await sleep(1000);
+    illustration.style.opacity = 0 ;
+    await sleep(500);
+    illustration.src = "assets/student.mp4" ;
+    illustration.style.opacity = 1 ;
+    illustration.play() ;
+    await typer(obj,"I am a Student.");
+    await sleep(1000);
+    await typer(obj,"Taking about my technical knowledge.");
+    await sleep(1000);
+    illustration.style.opacity = 0 ;
+    await sleep(500);
+    illustration.src = "assets/work.mp4" ;
+    illustration.style.opacity = 1 ;
+    illustration.play() ;
+    await typer(obj,"I know Multiple languages but not mastered anyone.");
+    await sleep(1000);
+    illustration.style.opacity = 0 ;
+    await sleep(500);
+    illustration.src = "assets/forest.mp4" ;
+    illustration.style.opacity = 1 ;
+    illustration.play() ;
+    await typer(obj,"I was Born in Kashipur, Uttrakhand.");
+    await sleep(1000);
+    illustration.style.opacity = 0 ;
+    await sleep(500);
+    illustration.src = "assets/collage.mp4" ;
+    illustration.style.opacity = 1 ;
+    illustration.play() ;
+    setTimeout(()=>{illustration.pause()},2500) ;
+    await typer(obj,"Currently Doing B-tech from birla institute of applied sciennces");
+    await sleep(1000);
+    illustration.style.opacity = 0 ;
+    await sleep(500);
+    illustration.src = "assets/thanks-button.mp4" ;
+    illustration.style.opacity = 1 ;
+    illustration.play() ;
+    await typer(obj,"Thanks for visiting our site.");
+    await  sleep(1000);
+    await typer(obj,"Taking you back to Home Screen");
+    await  sleep(1000);
+    history.back();
+
+}
+
 var Home = new Screen(document.querySelector(".HomeSCR")) ;
 var StoryAboutMe = new Screen(document.querySelector(".StoryAboutMe")) ;
 
@@ -116,6 +160,7 @@ URLChecker.then(()=>{
             Home.off() ;
             StoryAboutMe.on();
             Loader.off();
+            AboutMeAnimetion(document.querySelector(".speach")) ;
         },1000) ;
     }
 }) ;
@@ -136,6 +181,7 @@ if (location.hash=="#aboutme")
 {
     Home.off() ;
     StoryAboutMe.on();
+    AboutMeAnimetion(document.querySelector(".speach")) ;
 }
 else
 {
