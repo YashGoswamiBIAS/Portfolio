@@ -4,9 +4,9 @@ var vid3 = document.querySelector(".vid3");
 var cover = document.querySelector(".covervid");
 var aboutmeVid = document.querySelector(".aboutmeVid");
 
-vid1.style.opacity = 1 ;
-vid2.style.opacity = 1 ;
-vid3.style.opacity = 1 ;
+vid1.style.opacity = 0 ;
+vid2.style.opacity = 0 ;
+vid3.style.opacity = 0 ;
 cover.style.opacity = 1 ;
 
 function isInViewport(element) {

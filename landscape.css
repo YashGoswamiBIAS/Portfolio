@@ -1,4 +1,22 @@
 @media (orientation: landscape){
+    .SuperHeading
+    {
+        font-size: 80px;
+        font-family: "Corbel Light";
+        display: flex;
+        justify-content: center;
+    }
+    .Softwares
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tempVideo
+    {
+        height: 400px;
+        width: 400px;
+    }
     .StoryAboutMesem
     {
         display: flex;
