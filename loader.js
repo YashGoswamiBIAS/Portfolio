@@ -59,7 +59,7 @@ var welcometexts = async () => {
     text = "I am a Student" ;
     await typer(subtitle,text);
     await  sleep(1000);
-    text = "Situated in Hisar, Haryana" ;
+    text = "from Hisar, Haryana" ;
     await typer(subtitle,text);
     await  sleep(1000);
     text = "This is my portfolio" ;
