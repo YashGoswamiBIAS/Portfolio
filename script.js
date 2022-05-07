@@ -2,7 +2,7 @@ var vid1 = document.querySelector(".vid1");
 var vid2 = document.querySelector(".vid2");
 var vid3 = document.querySelector(".vid3");
 var cover = document.querySelector(".covervid");
-var aboutmeVid = document.querySelector(".aboutmeVid");
+var certificate = document.querySelector(".certificate");
 
 vid1.style.opacity = 0 ;
 vid2.style.opacity = 0 ;
@@ -65,6 +65,20 @@ VideoListenercover.then(()=>{
 VideoListenercover.else(()=>{
 });
 VideoListenercover.enable(true);
+
+
+certificate = new BoolListener() ;
+certificate.watch(()=>{return isInViewport(document.querySelector(".certificate"))}) ;
+certificate.then(()=>{
+    document.querySelector(".certificate_vid").currentTime = 0;
+    document.querySelector(".certificate_vid").style.opacity = 1 ;
+    document.querySelector(".Certificates").style.opacity = 1 ;
+    setTimeout(()=>{document.querySelector(".certificate_vid").play();},500);
+    certificate.enable(false);
+});
+certificate.else(()=>{
+});
+certificate.enable(true);
 
 var techs = () => {
     document.querySelector(".bubble").style.animation = "bubbleani 800ms forwards" ;

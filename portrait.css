@@ -1,4 +1,87 @@
 @media (orientation: portrait) {
+    .certificate_card {
+        background-size: cover;
+        height: 60vw;
+        width: 90vw;
+        background: white;
+        box-shadow: 5px 5px 20px 1px #adadad;
+        border-radius: 20px;
+        margin: 40px;
+        opacity: 0.7;
+        transition: all 1s;
+        position: relative;
+        justify-self: center;
+    }
+    .MyCertificatessem
+    {
+        display: grid;
+    }
+    .cert_icon
+    {
+        height: 80vw;
+        justify-self: center;
+        width: 80vw;
+        align-items: center;
+    }
+    @keyframes certified {
+        from{
+            height: 80vw;
+            width: 80vw;
+            align-items: center;
+        }
+        50%
+        {
+            height: 80vw;
+            width: 80vw;
+            align-items: center;
+        }
+        to{
+            height: 200px;
+            width: 200px;
+        }
+    }
+    .certificate_vid
+    {
+        transition: opacity 1s;
+        opacity: 0;
+        height: 600px;
+        width: 600px;
+        align-self: center;
+        justify-self: center;
+    }
+    .meaningHead
+    {
+        font-family: "Corbel Light";
+        font-size: 60px;
+        text-align: center;
+        color: black;
+    }
+    .meaning
+    {
+        font-size: 55px;
+        text-align: center;
+        display: none;
+        color: black;
+    }
+    .Certificates
+    {
+        font-family: "Corbel Light";
+    }
+    .certificate
+    {
+        z-index: 5;
+        height: 85vw;
+        width: 85vw;
+        border-radius: 40px;
+        box-shadow: 2px 2px 10px #aaaaaa;
+        display: grid;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        justify-self: center;
+        justify-content: center;
+        font-family: "Corbel Light";
+    }
     .SuperSubTitle
     {
         font-size: 50px;

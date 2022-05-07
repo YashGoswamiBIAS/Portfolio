@@ -6,6 +6,8 @@ var title = document.querySelector(".title") ;
 var subtitle = document.querySelector(".subtitle") ;
 var body = document.querySelector("body") ;
 var VideoBox = document.querySelector("#VideoBox") ;
+var cert_icon = document.querySelector(".cert_icon") ;
+var Certificates_area = document.querySelector(".Certificates_area") ;
 scrollTo(0,0);
 
 function sleep(ms) {
@@ -174,7 +176,6 @@ var Studies = video("assets/study-abroad.mp4");
 var codding = video("assets/coding.mp4");
 var electonics = video("assets/icon-animation-of-electronics.mp4");
 var happy = video("assets/happy.mp4");
-
 var MyGoals = async (obj) => {
     document.querySelector(".Narrator").innerHTML = "My Goals" ;
     if (!(StoryAboutMe.visible)) {return 0 ;}
@@ -208,15 +209,15 @@ var MyGoals = async (obj) => {
 var Home = new Screen(document.querySelector(".HomeSCR")) ;
 var StoryAboutMe = new Screen(document.querySelector(".StoryAboutMe")) ;
 var MySoftware = new Screen(document.querySelector(".MySoftware")) ;
-
+var Powercertificate = new Screen(document.querySelector(".MyCertificates"))
 var URLChecker = new BoolListener() ;
 URLChecker.watch(()=>{
     var bol ;
-    bol = !(location.hash == "") ;
+    bol = !(location.hash === "") ;
     return bol ;
 }) ;
 URLChecker.then(()=>{
-    if (location.hash=="#aboutme")
+    if (location.hash==="#aboutme")
     {
         Loader.on() ;
         setTimeout(()=>{
@@ -226,7 +227,7 @@ URLChecker.then(()=>{
             AboutMeAnimetion(document.querySelector(".speach")) ;
         },1000) ;
     }
-    else if (location.hash=="#MyGoals")
+    else if (location.hash==="#MyGoals")
     {
         Loader.on() ;
         setTimeout(()=>{
@@ -236,7 +237,7 @@ URLChecker.then(()=>{
             MyGoals(document.querySelector(".speach")) ;
         },1000) ;
     }
-    else if (location.href="#Softwares")
+    else if (location.hash==="#Softwares")
     {
         Loader.on() ;
         setTimeout(()=>{
@@ -247,9 +248,25 @@ URLChecker.then(()=>{
             document.querySelector(".tempVideo").play() ;
         },1000) ;
     }
+    else if (location.hash==="#certificate")
+    {
+        Loader.on();
+        setTimeout(()=>{
+            Home.off();
+            MySoftware.off()
+            StoryAboutMe.off();
+            Powercertificate.on();
+            Loader.off();
+            setTimeout(()=>{
+            //    animation: certified 1.5s forwards;
+                cert_icon.style.animation = "certified 1.5s forwards" ;
+                setTimeout(()=>{Certificates_area.style.opacity = 1 ;},1500) ;
+            },500)
+        },1000)
+    }
 }) ;
 URLChecker.else(()=>{
-    if (location.hash=="")
+    if (location.hash==="")
     {
         Loader.on();
         setTimeout(()=>{
@@ -257,33 +274,53 @@ URLChecker.else(()=>{
             StoryAboutMe.off();
             MySoftware.off();
             Loader.off();
+            Powercertificate.off()
         },1000) ;
     }
 }) ;
 URLChecker.enable(true);
 
-if (location.hash=="#aboutme")
+if (location.hash==="#aboutme")
 {
     Home.off() ;
     StoryAboutMe.on();
     MySoftware.off();
+    Powercertificate.off();
     AboutMeAnimetion(document.querySelector(".speach")) ;
 }
-else if (location.hash=="#MyGoals")
+else if (location.hash==="#MyGoals")
 {
     Home.off() ;
     StoryAboutMe.on();
     MySoftware.off();
+    Powercertificate.off()
     MyGoals(document.querySelector(".speach")) ;
 }
-else if (location.hash=="#Softwares")
+
+else if (location.hash==="#Softwares")
 {
     Home.off();
     StoryAboutMe.off();
     MySoftware.on();
+    Powercertificate.off()
     document.querySelector(".tempVideo").duration = 0 ;
     setTimeout(()=>{
         document.querySelector(".tempVideo").play() ;
+    },1000)
+}
+else if (location.hash==="#certificate")
+{
+    Loader.on();
+    Home.off();
+    MySoftware.off()
+    StoryAboutMe.off();
+    Powercertificate.on();
+    setTimeout(()=>{Loader.off()
+        setTimeout(()=>{
+            //    animation: certified 1.5s forwards;
+            cert_icon.style.animation = "certified 1.5s forwards" ;
+            setTimeout(()=>{Certificates_area.style.opacity = 1 ;},1500) ;
+        },500)
     },1000)
 }
 else
@@ -291,4 +328,5 @@ else
     Home.on();
     StoryAboutMe.off();
     MySoftware.off();
+    Powercertificate.off();
 }
