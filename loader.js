@@ -206,6 +206,10 @@ var MyGoals = async (obj) => {
     history.back();
 }
 
+
+// Screens avalible here
+
+
 var Home = new Screen(document.querySelector(".HomeSCR")) ;
 var StoryAboutMe = new Screen(document.querySelector(".StoryAboutMe")) ;
 var MySoftware = new Screen(document.querySelector(".MySoftware")) ;
